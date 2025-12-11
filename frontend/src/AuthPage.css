@@ -17,56 +17,50 @@
   background-color: #fff;
   padding: 30px;
   border-radius: 10px;
-  width: 400px;
+  width: 600px;
   position: relative;
   box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+
 }
 
-/* Close button */
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 20px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-/* Title */
-.title {
-  margin-bottom: 20px;
+#Auth_heading{
   text-align: center;
-  font-family: Arial, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+  font-weight: bol;
+  font-size: 30px;
 }
 
-/* Input fields */
-.input-field {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 16px;
+input[type=text], input[type=password] ,input[type=email]{
+  width: 95%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
 }
 
-/* Buttons container */
-.btn-container {
+.Auth_btn{
+  width: 300px;
+  height: 40px;
+  background-color: rgb(144, 201, 144);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  height: 45px;
+  border-radius: 7px;
+  font-size: large;
+
+}
+.Auth_btn:hover{
+  background-color: rgb(86, 240, 86);
+}
+
+.button-row {
   display: flex;
   justify-content: center;
-}
-
-/* Buttons */
-.btn {
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  background-color: #007BFF;
-  color: #fff;
-}
-
-.login-btn {
-  margin-left: 10px;
+  gap: 20px;       /* space between buttons */
+  margin-top: 20px;
+  margin-left: 0;
+  justify-content: space-between;
 }

@@ -1,13 +1,17 @@
 import { useState } from "react";
 import AuthPage from "./AuthPage";
+import Profile from "./Profile";
 
 function App() {
-  const [showAuth, setShowAuth] = useState(false);
+  const [user, setUser] = useState(null); // stores logged-in user
 
   return (
     <div>
-      <button onClick={() => setShowAuth(true)}>Open Auth</button>
-      {showAuth && <AuthPage onClose={() => setShowAuth(false)} />}
+      {user ? (
+        <Profile user={user} /> // if logged in, show profile
+      ) : (
+        <AuthPage setUser={setUser} /> // else show login/signup
+      )}
     </div>
   );
 }
